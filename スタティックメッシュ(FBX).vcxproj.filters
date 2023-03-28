@@ -1,0 +1,560 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>ソースファイル\WindowMain</Filter>
+    </ClCompile>
+    <ClCompile Include="AppDx11.cpp">
+      <Filter>ソースファイル\DirectX11</Filter>
+    </ClCompile>
+    <ClCompile Include="AppDx12.cpp">
+      <Filter>ソースファイル\DirectX12</Filter>
+    </ClCompile>
+    <ClCompile Include="RendererManager.cpp">
+      <Filter>ソースファイル\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="GameManager.cpp">
+      <Filter>ソースファイル\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleScene.cpp">
+      <Filter>ソースファイル\TitleScene</Filter>
+    </ClCompile>
+    <ClCompile Include="GameScene.cpp">
+      <Filter>ソースファイル\GameScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Polygon2D.cpp">
+      <Filter>ソースファイル\GameScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>ソースファイル\GameScene</Filter>
+    </ClCompile>
+    <ClCompile Include="camera.cpp">
+      <Filter>ソースファイル\GameScene</Filter>
+    </ClCompile>
+    <ClCompile Include="SkyDome.cpp">
+      <Filter>ソースファイル\GameScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Plane.cpp">
+      <Filter>ソースファイル\GameScene</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui11.cpp">
+      <Filter>ソースファイル\DirectX11</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui12.cpp">
+      <Filter>ソースファイル\DirectX12</Filter>
+    </ClCompile>
+    <ClCompile Include="TextPolygon2D.cpp">
+      <Filter>ソースファイル\GameScene</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui.cpp">
+      <Filter>Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_draw.cpp">
+      <Filter>Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_impl_dx11.cpp">
+      <Filter>Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_impl_dx12.cpp">
+      <Filter>Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_impl_win32.cpp">
+      <Filter>Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_tables.cpp">
+      <Filter>Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_widgets.cpp">
+      <Filter>Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="RootSignature.cpp">
+      <Filter>ソースファイル\DirectX12</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleLogo.cpp">
+      <Filter>ソースファイル\TitleScene</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationModel11.cpp">
+      <Filter>ソースファイル\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationModel12.cpp">
+      <Filter>ソースファイル\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="DDSTextureLoader12.cpp">
+      <Filter>ソースファイル\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject2D11.cpp">
+      <Filter>ソースファイル\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject2D12.cpp">
+      <Filter>ソースファイル\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="input.cpp">
+      <Filter>ソースファイル\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Model11.cpp">
+      <Filter>ソースファイル\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Model12.cpp">
+      <Filter>ソースファイル\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="WICTextureLoader12.cpp">
+      <Filter>ソースファイル\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Transition.cpp">
+      <Filter>ソースファイル\LoadingScene</Filter>
+    </ClCompile>
+    <ClCompile Include="LoadingScene.cpp">
+      <Filter>ソースファイル\LoadingScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Lake.cpp">
+      <Filter>ソースファイル\TitleScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Moon.cpp">
+      <Filter>ソースファイル\TitleScene</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleText.cpp">
+      <Filter>ソースファイル\TitleScene</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleText1.cpp">
+      <Filter>ソースファイル\TitleScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>ソースファイル\GameScene</Filter>
+    </ClCompile>
+    <ClCompile Include="RayTracingScene.cpp">
+      <Filter>ソースファイル\RayTracingScene</Filter>
+    </ClCompile>
+    <ClCompile Include="RayTracingControl.cpp">
+      <Filter>ソースファイル\RayTracingScene</Filter>
+    </ClCompile>
+    <ClCompile Include="VertexBuffer.cpp">
+      <Filter>ソースファイル\DirectX12</Filter>
+    </ClCompile>
+    <ClCompile Include="IndexBuffer.cpp">
+      <Filter>ソースファイル\DirectX12</Filter>
+    </ClCompile>
+    <ClCompile Include="ConstantBuffer.cpp">
+      <Filter>ソースファイル\DirectX12</Filter>
+    </ClCompile>
+    <ClCompile Include="PipelineState.cpp">
+      <Filter>ソースファイル\DirectX12</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>ソースファイル\DirectX12</Filter>
+    </ClCompile>
+    <ClCompile Include="BLASBuffers.cpp">
+      <Filter>ソースファイル\DirectX12</Filter>
+    </ClCompile>
+    <ClCompile Include="TLASBuffers.cpp">
+      <Filter>ソースファイル\DirectX12</Filter>
+    </ClCompile>
+    <ClCompile Include="DxilLibrary.cpp">
+      <Filter>ソースファイル\DirectX12</Filter>
+    </ClCompile>
+    <ClCompile Include="Ball.cpp">
+      <Filter>ソースファイル\RayTracingScene</Filter>
+    </ClCompile>
+    <ClCompile Include="StructuredBuffer.cpp">
+      <Filter>ソースファイル\DirectX12</Filter>
+    </ClCompile>
+    <ClCompile Include="Box.cpp">
+      <Filter>ソースファイル\RayTracingScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Floor.cpp">
+      <Filter>ソースファイル\RayTracingScene</Filter>
+    </ClCompile>
+    <ClCompile Include="PointLight.cpp">
+      <Filter>ソースファイル\RayTracingScene</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderTable.cpp">
+      <Filter>ソースファイル\DirectX12</Filter>
+    </ClCompile>
+    <ClCompile Include="Pillar.cpp">
+      <Filter>ソースファイル\RayTracingScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Cacti.cpp">
+      <Filter>ソースファイル\RayTracingScene</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.h">
+      <Filter>ヘッダーファイル\WindowMain</Filter>
+    </ClInclude>
+    <ClInclude Include="AppDx12.h">
+      <Filter>ヘッダーファイル\DirectX12</Filter>
+    </ClInclude>
+    <ClInclude Include="AppDx11.h">
+      <Filter>ヘッダーファイル\DirectX11</Filter>
+    </ClInclude>
+    <ClInclude Include="RendererManager.h">
+      <Filter>ヘッダーファイル\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="GameManager.h">
+      <Filter>ヘッダーファイル\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleScene.h">
+      <Filter>ヘッダーファイル\TitleScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>ヘッダーファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScene.h">
+      <Filter>ヘッダーファイル\GameScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Polygon2D.h">
+      <Filter>ヘッダーファイル\GameScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>ヘッダーファイル\GameScene</Filter>
+    </ClInclude>
+    <ClInclude Include="camera.h">
+      <Filter>ヘッダーファイル\GameScene</Filter>
+    </ClInclude>
+    <ClInclude Include="SkyDome.h">
+      <Filter>ヘッダーファイル\GameScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Plane.h">
+      <Filter>ヘッダーファイル\GameScene</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui11.h">
+      <Filter>ヘッダーファイル\DirectX11</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui12.h">
+      <Filter>ヘッダーファイル\DirectX12</Filter>
+    </ClInclude>
+    <ClInclude Include="TextPolygon2D.h">
+      <Filter>ヘッダーファイル\GameScene</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imconfig.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_impl_dx11.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_impl_dx12.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_impl_win32.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_internal.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imstb_rectpack.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imstb_textedit.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imstb_truetype.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="RootSignature.h">
+      <Filter>ヘッダーファイル\DirectX12</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleLogo.h">
+      <Filter>ヘッダーファイル\TitleScene</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationModel11.h">
+      <Filter>ヘッダーファイル\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationModel12.h">
+      <Filter>ヘッダーファイル\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="DDSTextureLoader12.h">
+      <Filter>ヘッダーファイル\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject2D11.h">
+      <Filter>ヘッダーファイル\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject2D12.h">
+      <Filter>ヘッダーファイル\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="input.h">
+      <Filter>ヘッダーファイル\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Model11.h">
+      <Filter>ヘッダーファイル\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Model12.h">
+      <Filter>ヘッダーファイル\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="WICTextureLoader12.h">
+      <Filter>ヘッダーファイル\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>ヘッダーファイル\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Transition.h">
+      <Filter>ヘッダーファイル\LoadingScene</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadingScene.h">
+      <Filter>ヘッダーファイル\LoadingScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Lake.h">
+      <Filter>ヘッダーファイル\TitleScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Moon.h">
+      <Filter>ヘッダーファイル\TitleScene</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleText.h">
+      <Filter>ヘッダーファイル\TitleScene</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleText1.h">
+      <Filter>ヘッダーファイル\TitleScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>ヘッダーファイル\GameScene</Filter>
+    </ClInclude>
+    <ClInclude Include="RayTracingScene.h">
+      <Filter>ヘッダーファイル\RayTracingScene</Filter>
+    </ClInclude>
+    <ClInclude Include="RayTracingControl.h">
+      <Filter>ヘッダーファイル\RayTracingScene</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexBuffer.h">
+      <Filter>ヘッダーファイル\DirectX12</Filter>
+    </ClInclude>
+    <ClInclude Include="IndexBuffer.h">
+      <Filter>ヘッダーファイル\DirectX12</Filter>
+    </ClInclude>
+    <ClInclude Include="ConstantBuffer.h">
+      <Filter>ヘッダーファイル\DirectX12</Filter>
+    </ClInclude>
+    <ClInclude Include="PipelineState.h">
+      <Filter>ヘッダーファイル\DirectX12</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>ヘッダーファイル\DirectX12</Filter>
+    </ClInclude>
+    <ClInclude Include="BLASBuffers.h">
+      <Filter>ヘッダーファイル\DirectX12</Filter>
+    </ClInclude>
+    <ClInclude Include="TLASBuffers.h">
+      <Filter>ヘッダーファイル\DirectX12</Filter>
+    </ClInclude>
+    <ClInclude Include="DxilLibrary.h">
+      <Filter>ヘッダーファイル\DirectX12</Filter>
+    </ClInclude>
+    <ClInclude Include="Ball.h">
+      <Filter>ヘッダーファイル\RayTracingScene</Filter>
+    </ClInclude>
+    <ClInclude Include="StructuredBuffer.h">
+      <Filter>ヘッダーファイル\DirectX12</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderTable.h">
+      <Filter>ヘッダーファイル\DirectX12</Filter>
+    </ClInclude>
+    <ClInclude Include="Box.h">
+      <Filter>ヘッダーファイル\RayTracingScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Floor.h">
+      <Filter>ヘッダーファイル\RayTracingScene</Filter>
+    </ClInclude>
+    <ClInclude Include="PointLight.h">
+      <Filter>ヘッダーファイル\RayTracingScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Pillar.h">
+      <Filter>ヘッダーファイル\RayTracingScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Cacti.h">
+      <Filter>ヘッダーファイル\RayTracingScene</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="ソースファイル">
+      <UniqueIdentifier>{1e410335-8961-4172-8d97-4ee316624305}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダーファイル">
+      <UniqueIdentifier>{f37c105c-4ac0-4093-9a46-ee67eeb0f49e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダーファイル\WindowMain">
+      <UniqueIdentifier>{20fa620a-ef44-45b3-b225-80b4aa907afe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソースファイル\WindowMain">
+      <UniqueIdentifier>{26a1b1e5-6278-4b34-aa5e-675614810544}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダーファイル\DirectX11">
+      <UniqueIdentifier>{cf26e314-f061-4f7a-b436-667de1f561cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダーファイル\DirectX12">
+      <UniqueIdentifier>{c7c12dc7-2dfa-4a9d-8c04-57d85c0f100a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソースファイル\DirectX11">
+      <UniqueIdentifier>{2520600e-8bb1-4479-9942-d6bb98fe8817}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソースファイル\DirectX12">
+      <UniqueIdentifier>{c1f0635b-a47c-4817-ae08-af99f69d7a5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソースファイル\Manager">
+      <UniqueIdentifier>{7700c2c8-5813-4e0b-8749-e298df8f0417}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダーファイル\Manager">
+      <UniqueIdentifier>{9fcff100-cf5d-421d-a65c-9bc2b353bb5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソースファイル\TitleScene">
+      <UniqueIdentifier>{66374016-f1f8-458a-9a49-c446ad3ab6c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダーファイル\TitleScene">
+      <UniqueIdentifier>{e2fb105b-1d47-4fd5-b03b-fc11abe6d7ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Imgui">
+      <UniqueIdentifier>{2f0c71bb-80c6-4288-b01d-7234d29f7355}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="シェーダー">
+      <UniqueIdentifier>{758b27da-a4b9-494f-8d42-91858eba57eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソースファイル\GameScene">
+      <UniqueIdentifier>{6307a9b9-2713-4907-9f00-ea3fdaa8d2c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダーファイル\GameScene">
+      <UniqueIdentifier>{84de817e-52dc-478c-8e27-a591a2edbf23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダーファイル\Class">
+      <UniqueIdentifier>{426abc93-5433-45cc-af8a-1142b5c3944a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソースファイル\Class">
+      <UniqueIdentifier>{61b1eb95-a4d8-43b2-9153-554c41756cde}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソースファイル\LoadingScene">
+      <UniqueIdentifier>{c9db2f22-9ab5-4708-b0c7-a1c3abf799ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダーファイル\LoadingScene">
+      <UniqueIdentifier>{4ce73802-ae1d-4698-84da-ac5846e013de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダーファイル\TestScene">
+      <UniqueIdentifier>{b5ec0319-4169-4917-ae49-088f6ad762d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソースファイル\RayTracingScene">
+      <UniqueIdentifier>{164404cf-3897-4ce0-abf3-33b2a4292c86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダーファイル\RayTracingScene">
+      <UniqueIdentifier>{58d78e33-d1d7-4692-b945-12fb8524c69f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="シェーダー\RayTracing">
+      <UniqueIdentifier>{b318f161-d42c-490f-811e-91941cee5d28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="シェーダー\Normal">
+      <UniqueIdentifier>{edf58e31-ce0a-4fc5-b2f5-1eb9c6599ab2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="shader\RayTracingHeader.hlsli">
+      <Filter>シェーダー\RayTracing</Filter>
+    </None>
+    <None Include="shader\Header.hlsli">
+      <Filter>シェーダー\Normal</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="shader\BoxRayTracing.hlsl">
+      <Filter>シェーダー\RayTracing</Filter>
+    </FxCompile>
+    <FxCompile Include="shader\RayTracing.hlsl">
+      <Filter>シェーダー\RayTracing</Filter>
+    </FxCompile>
+    <FxCompile Include="shader\BlinnPhongLightingPS.hlsl">
+      <Filter>シェーダー\Normal</Filter>
+    </FxCompile>
+    <FxCompile Include="shader\BlinnPhongLightingVS.hlsl">
+      <Filter>シェーダー\Normal</Filter>
+    </FxCompile>
+    <FxCompile Include="shader\DepthShadowMappingPS.hlsl">
+      <Filter>シェーダー\Normal</Filter>
+    </FxCompile>
+    <FxCompile Include="shader\DepthShadowMappingVS.hlsl">
+      <Filter>シェーダー\Normal</Filter>
+    </FxCompile>
+    <FxCompile Include="shader\NormalMap+ShadowPS.hlsl">
+      <Filter>シェーダー\Normal</Filter>
+    </FxCompile>
+    <FxCompile Include="shader\NormalMap+ShadowVS.hlsl">
+      <Filter>シェーダー\Normal</Filter>
+    </FxCompile>
+    <FxCompile Include="shader\normalMappingPS.hlsl">
+      <Filter>シェーダー\Normal</Filter>
+    </FxCompile>
+    <FxCompile Include="shader\normalMappingRegi0PS.hlsl">
+      <Filter>シェーダー\Normal</Filter>
+    </FxCompile>
+    <FxCompile Include="shader\normalMappingVS.hlsl">
+      <Filter>シェーダー\Normal</Filter>
+    </FxCompile>
+    <FxCompile Include="shader\PhongPS.hlsl">
+      <Filter>シェーダー\Normal</Filter>
+    </FxCompile>
+    <FxCompile Include="shader\PhongVS.hlsl">
+      <Filter>シェーダー\Normal</Filter>
+    </FxCompile>
+    <FxCompile Include="shader\pixelLightingPS.hlsl">
+      <Filter>シェーダー\Normal</Filter>
+    </FxCompile>
+    <FxCompile Include="shader\pixelLightingVS.hlsl">
+      <Filter>シェーダー\Normal</Filter>
+    </FxCompile>
+    <FxCompile Include="shader\PlayerPS.hlsl">
+      <Filter>シェーダー\Normal</Filter>
+    </FxCompile>
+    <FxCompile Include="shader\PlayerVS.hlsl">
+      <Filter>シェーダー\Normal</Filter>
+    </FxCompile>
+    <FxCompile Include="shader\RimLightingPS.hlsl">
+      <Filter>シェーダー\Normal</Filter>
+    </FxCompile>
+    <FxCompile Include="shader\RimLightingVS.hlsl">
+      <Filter>シェーダー\Normal</Filter>
+    </FxCompile>
+    <FxCompile Include="shader\ShadowPS.hlsl">
+      <Filter>シェーダー\Normal</Filter>
+    </FxCompile>
+    <FxCompile Include="shader\ShadowVS.hlsl">
+      <Filter>シェーダー\Normal</Filter>
+    </FxCompile>
+    <FxCompile Include="shader\toonPS.hlsl">
+      <Filter>シェーダー\Normal</Filter>
+    </FxCompile>
+    <FxCompile Include="shader\toonPSTexture.hlsl">
+      <Filter>シェーダー\Normal</Filter>
+    </FxCompile>
+    <FxCompile Include="shader\toonVS.hlsl">
+      <Filter>シェーダー\Normal</Filter>
+    </FxCompile>
+    <FxCompile Include="shader\toonVSTexture.hlsl">
+      <Filter>シェーダー\Normal</Filter>
+    </FxCompile>
+    <FxCompile Include="shader\unlitColorPS.hlsl">
+      <Filter>シェーダー\Normal</Filter>
+    </FxCompile>
+    <FxCompile Include="shader\unlitColorVS.hlsl">
+      <Filter>シェーダー\Normal</Filter>
+    </FxCompile>
+    <FxCompile Include="shader\unlitTexturePS.hlsl">
+      <Filter>シェーダー\Normal</Filter>
+    </FxCompile>
+    <FxCompile Include="shader\unlitTextureVS.hlsl">
+      <Filter>シェーダー\Normal</Filter>
+    </FxCompile>
+    <FxCompile Include="shader\VertexLightingPS.hlsl">
+      <Filter>シェーダー\Normal</Filter>
+    </FxCompile>
+    <FxCompile Include="shader\VertexLightingVS.hlsl">
+      <Filter>シェーダー\Normal</Filter>
+    </FxCompile>
+    <FxCompile Include="shader\FloorRayTracing.hlsl">
+      <Filter>シェーダー\RayTracing</Filter>
+    </FxCompile>
+    <FxCompile Include="shader\PointLightRayTracing.hlsl">
+      <Filter>シェーダー\RayTracing</Filter>
+    </FxCompile>
+    <FxCompile Include="shader\PillarRayTracing.hlsl">
+      <Filter>シェーダー\RayTracing</Filter>
+    </FxCompile>
+    <FxCompile Include="shader\CactiRayTracing.hlsl">
+      <Filter>シェーダー\RayTracing</Filter>
+    </FxCompile>
+  </ItemGroup>
+</Project>

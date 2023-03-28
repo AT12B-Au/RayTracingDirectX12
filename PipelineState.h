@@ -1,0 +1,39 @@
+#pragma once
+
+class PipelineState
+{
+private:
+
+	ComPtr<ID3D12PipelineState> m_PipelineState = nullptr;
+	//頂点レイアウト作成
+	//D3D12_INPUT_ELEMENT_DESC m_VertexLayout[];
+
+public:
+
+	/*PipelineState()
+	{
+		m_VertexLayout =
+		{
+			{ "POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, 0, D3D12_INPUT_CLASSIFICATION_PER_VERTEX_DATA, 0 },
+			{ "NORMAL", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, 4 * 3, D3D12_INPUT_CLASSIFICATION_PER_VERTEX_DATA, 0 },
+			{ "TANGENT",0,DXGI_FORMAT_R32G32B32_FLOAT,0,4 * 6,D3D12_INPUT_CLASSIFICATION_PER_VERTEX_DATA,0},
+			{ "BINORMAL", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, 4 * 9, D3D12_INPUT_CLASSIFICATION_PER_VERTEX_DATA, 0 },
+			{ "TEXCOORD", 0, DXGI_FORMAT_R32G32_FLOAT, 0, 4 * 12, D3D12_INPUT_CLASSIFICATION_PER_VERTEX_DATA, 0 },
+			{ "BLENDINDICES", 0, DXGI_FORMAT_R32G32B32A32_SINT, 0, 4 * 14, D3D12_INPUT_CLASSIFICATION_PER_VERTEX_DATA, 0 },
+			{ "BLENDWEIGHT", 0, DXGI_FORMAT_R32G32B32A32_FLOAT, 0, 4 * 18, D3D12_INPUT_CLASSIFICATION_PER_VERTEX_DATA, 0 },
+		};
+	}*/
+
+	void UnInit()
+	{
+		if (m_PipelineState)
+			m_PipelineState->Release();
+	}
+
+	void Init(D3D12_GRAPHICS_PIPELINE_STATE_DESC desc);
+
+	ComPtr<ID3D12PipelineState> GetPipelineState() { return m_PipelineState; }
+
+	//const D3D12_INPUT_ELEMENT_DESC* GetVertexLayout() const { return m_vertexLayout; }
+
+};
