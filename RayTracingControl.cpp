@@ -289,22 +289,25 @@ void RayTracingControl::Init()
 
 		//closesthit用のローカルルートシグネチャのアソシエーションの作成
 		{
-			D3D12_SUBOBJECT_TO_EXPORTS_ASSOCIATION* HitAssociation = new D3D12_SUBOBJECT_TO_EXPORTS_ASSOCIATION;
-			ZeroMemory(&SubObject, sizeof(D3D12_STATE_SUBOBJECT));
-			ZeroMemory(HitAssociation, sizeof(D3D12_SUBOBJECT_TO_EXPORTS_ASSOCIATION));
-			HitAssociation->NumExports = TotalHitShader * scene->GetInstanceContainer().size();
-			HitAssociation->pExports = ClosestHitShaderName;
-			HitAssociation->pSubobjectToAssociate = &SubObjectArray[SignNum];
+			for (int i = 0; i < TotalHitShader; i++)
+			{
+				D3D12_SUBOBJECT_TO_EXPORTS_ASSOCIATION* HitAssociation = new D3D12_SUBOBJECT_TO_EXPORTS_ASSOCIATION;
+				ZeroMemory(&SubObject, sizeof(D3D12_STATE_SUBOBJECT));
+				ZeroMemory(HitAssociation, sizeof(D3D12_SUBOBJECT_TO_EXPORTS_ASSOCIATION));
+				HitAssociation->NumExports = 1;
+				HitAssociation->pExports = &ClosestHitShaderName[i];
+				HitAssociation->pSubobjectToAssociate = &SubObjectArray[SignNum];
 
-			SubObject.Type = D3D12_STATE_SUBOBJECT_TYPE_SUBOBJECT_TO_EXPORTS_ASSOCIATION;
-			SubObject.pDesc = HitAssociation;
+				SubObject.Type = D3D12_STATE_SUBOBJECT_TYPE_SUBOBJECT_TO_EXPORTS_ASSOCIATION;
+				SubObject.pDesc = HitAssociation;
 
 #ifdef _DEBUG
-			SubObjectArray[index] = SubObject;
+				SubObjectArray[index] = SubObject;
 #else
-			SubObjectArray.push_back(SubObject);
+				SubObjectArray.push_back(SubObject);
 #endif
-			index++;
+				index++;
+			}
 		}
 
 		//シェーダーコンフィグの作成
