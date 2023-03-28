@@ -178,7 +178,9 @@
     <ClCompile Include="AnimationModel11.cpp" />
     <ClCompile Include="AnimationModel12.cpp" />
     <ClCompile Include="AppDx11.cpp" />
-    <ClCompile Include="AppDx12.cpp" />
+    <ClCompile Include="AppDx12.cpp">
+      <DeploymentContent>false</DeploymentContent>
+    </ClCompile>
     <ClCompile Include="Box.cpp" />
     <ClCompile Include="BLASBuffers.cpp" />
     <ClCompile Include="camera.cpp" />
