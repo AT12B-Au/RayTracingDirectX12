@@ -93,7 +93,9 @@ HRESULT AppDx12::Init()
 
 	if (featureSupportData.RaytracingTier == D3D12_RAYTRACING_TIER_NOT_SUPPORTED)
 	{
-		throw std::runtime_error("GraphicCardNotSuppotRayTracing");
+		//throw std::runtime_error("GraphicCardNotSuppotRayTracing");
+		MessageBoxA(0, "GraphicCardNotSuppotRayTracing", "ãNìÆÉGÉâÅ[", MB_ICONERROR);
+		exit(0);
 	}
 
 	hr = D3D12CreateDevice(UseAdapter.Get(), D3D_FEATURE_LEVEL_12_0, IID_PPV_ARGS(&m_Device));
