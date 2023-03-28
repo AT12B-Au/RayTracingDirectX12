@@ -64,7 +64,7 @@ HRESULT AppDx12::Init()
 		if (desc.Flags & DXGI_ADAPTER_FLAG_SOFTWARE)
 			continue;
 
-		if (SUCCEEDED(D3D12CreateDevice(adapter.Get(), D3D_FEATURE_LEVEL_11_0, _uuidof(ID3D12Device), nullptr)))
+		if (SUCCEEDED(D3D12CreateDevice(adapter.Get(), D3D_FEATURE_LEVEL_12_0, _uuidof(ID3D12Device), nullptr)))
 		{
 			break;
 		}
@@ -80,7 +80,7 @@ HRESULT AppDx12::Init()
 	ComPtr<ID3D12Device> testDevice;
 	D3D12_FEATURE_DATA_D3D12_OPTIONS5 featureSupportData = {};
 
-	hr = D3D12CreateDevice(UseAdapter.Get(), D3D_FEATURE_LEVEL_11_0, IID_PPV_ARGS(&testDevice));
+	hr = D3D12CreateDevice(UseAdapter.Get(), D3D_FEATURE_LEVEL_12_0, IID_PPV_ARGS(&testDevice));
 	if (FAILED(hr))
 	{
 		throw std::runtime_error("TestDeviceFailed");
@@ -96,7 +96,7 @@ HRESULT AppDx12::Init()
 		throw std::runtime_error("GraphicCardNotSuppotRayTracing");
 	}
 
-	hr = D3D12CreateDevice(UseAdapter.Get(), D3D_FEATURE_LEVEL_11_0, IID_PPV_ARGS(&m_Device));
+	hr = D3D12CreateDevice(UseAdapter.Get(), D3D_FEATURE_LEVEL_12_0, IID_PPV_ARGS(&m_Device));
 	if (FAILED(hr))
 	{
 		throw std::runtime_error("CreateDeviceFailed");
