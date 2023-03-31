@@ -105,11 +105,8 @@ void RayTracingControl::Init()
 	int EntriesNum = 0;
 	/// PSOの作成
 	{
-#ifdef _DEBUG
 		std::array<D3D12_STATE_SUBOBJECT, (6 + TotalMissShader + TotalHitShader * 3)> SubObjectArray = {};
-#else
-		boost::container::vector<D3D12_STATE_SUBOBJECT> SubObjectArray;
-#endif
+
 		//DXILライブラリの作成(シェーダーとそのエントリーポイントを含む）
 		D3D12_STATE_SUBOBJECT SubObject = {};
 		UINT index = 0;
@@ -150,11 +147,8 @@ void RayTracingControl::Init()
 					SubObject = m_DxilLibrary[i]->CreateDxilLibrary(EntryPoints.data(), 2 + TotalMissShader);
 				else
 					SubObject = m_DxilLibrary[i]->CreateDxilLibrary(&ClosestHitShaderName[i], 1);
-#ifdef _DEBUG
+
 				SubObjectArray[index] = SubObject;
-#else
-				SubObjectArray.push_back(SubObject);
-#endif
 				index++;
 			}
 		}
@@ -175,11 +169,8 @@ void RayTracingControl::Init()
 				SubObject.Type = D3D12_STATE_SUBOBJECT_TYPE_HIT_GROUP;
 				SubObject.pDesc = HitGroupDesc;
 
-#ifdef _DEBUG
 				SubObjectArray[index] = SubObject;
-#else
-				SubObjectArray.push_back(SubObject);
-#endif
+
 				index++;
 			}
 		}
@@ -236,11 +227,8 @@ void RayTracingControl::Init()
 			SubObject.Type = D3D12_STATE_SUBOBJECT_TYPE_LOCAL_ROOT_SIGNATURE;
 			SubObject.pDesc = m_RayGenLocal.GetAddressOf();
 
-#ifdef _DEBUG
 			SubObjectArray[index] = SubObject;
-#else
-			SubObjectArray.push_back(SubObject);
-#endif
+
 			index++;
 		}
 
@@ -259,32 +247,31 @@ void RayTracingControl::Init()
 			SubObject.Type = D3D12_STATE_SUBOBJECT_TYPE_SUBOBJECT_TO_EXPORTS_ASSOCIATION;
 			SubObject.pDesc = RayGenAssociation;
 
-#ifdef _DEBUG
+
 			SubObjectArray[index] = SubObject;
-#else
-			SubObjectArray.push_back(SubObject);
-#endif
+
 			index++;
 		}
 
 		//Miss用のローカルルートシグネチャのアソシエーションの作成
 		{
-			D3D12_SUBOBJECT_TO_EXPORTS_ASSOCIATION* MissAssociation = new D3D12_SUBOBJECT_TO_EXPORTS_ASSOCIATION;
-			ZeroMemory(&SubObject, sizeof(D3D12_STATE_SUBOBJECT));
-			ZeroMemory(MissAssociation, sizeof(D3D12_SUBOBJECT_TO_EXPORTS_ASSOCIATION));
-			MissAssociation->NumExports = TotalMissShader;
-			MissAssociation->pExports = MissShaderName;
-			MissAssociation->pSubobjectToAssociate = &SubObjectArray[SignNum];
+			for (int i = 0; i < TotalMissShader; i++)
+			{
+				D3D12_SUBOBJECT_TO_EXPORTS_ASSOCIATION* MissAssociation = new D3D12_SUBOBJECT_TO_EXPORTS_ASSOCIATION;
+				ZeroMemory(&SubObject, sizeof(D3D12_STATE_SUBOBJECT));
+				ZeroMemory(MissAssociation, sizeof(D3D12_SUBOBJECT_TO_EXPORTS_ASSOCIATION));
+				MissAssociation->NumExports = 1;
+				MissAssociation->pExports = &MissShaderName[i];
+				MissAssociation->pSubobjectToAssociate = &SubObjectArray[SignNum];
 
-			SubObject.Type = D3D12_STATE_SUBOBJECT_TYPE_SUBOBJECT_TO_EXPORTS_ASSOCIATION;
-			SubObject.pDesc = MissAssociation;
+				SubObject.Type = D3D12_STATE_SUBOBJECT_TYPE_SUBOBJECT_TO_EXPORTS_ASSOCIATION;
+				SubObject.pDesc = MissAssociation;
 
-#ifdef _DEBUG
-			SubObjectArray[index] = SubObject;
-#else
-			SubObjectArray.push_back(SubObject);
-#endif
-			index++;
+
+				SubObjectArray[index] = SubObject;
+
+				index++;
+			}
 		}
 
 		//closesthit用のローカルルートシグネチャのアソシエーションの作成
@@ -301,11 +288,9 @@ void RayTracingControl::Init()
 				SubObject.Type = D3D12_STATE_SUBOBJECT_TYPE_SUBOBJECT_TO_EXPORTS_ASSOCIATION;
 				SubObject.pDesc = HitAssociation;
 
-#ifdef _DEBUG
+
 				SubObjectArray[index] = SubObject;
-#else
-				SubObjectArray.push_back(SubObject);
-#endif
+
 				index++;
 			}
 		}
@@ -320,11 +305,9 @@ void RayTracingControl::Init()
 			SubObject.Type = D3D12_STATE_SUBOBJECT_TYPE_RAYTRACING_SHADER_CONFIG;
 			SubObject.pDesc = ShaderConfig;
 
-#ifdef _DEBUG
+
 			SubObjectArray[index] = SubObject;
-#else
-			SubObjectArray.push_back(SubObject);
-#endif
+
 			index++;
 		}
 
@@ -342,11 +325,9 @@ void RayTracingControl::Init()
 			SubObject.Type = D3D12_STATE_SUBOBJECT_TYPE_SUBOBJECT_TO_EXPORTS_ASSOCIATION;
 			SubObject.pDesc = ShaderAssociation;
 
-#ifdef _DEBUG
+
 			SubObjectArray[index] = SubObject;
-#else
-			SubObjectArray.push_back(SubObject);
-#endif
+
 			index++;
 		}
 
@@ -359,11 +340,9 @@ void RayTracingControl::Init()
 			SubObject.Type = D3D12_STATE_SUBOBJECT_TYPE_RAYTRACING_PIPELINE_CONFIG;
 			SubObject.pDesc = config;
 
-#ifdef _DEBUG
+
 			SubObjectArray[index] = SubObject;
-#else
-			SubObjectArray.push_back(SubObject);
-#endif
+
 			index++;
 		}
 
@@ -415,11 +394,8 @@ void RayTracingControl::Init()
 			ID3D12RootSignature* RootSign = m_GlobalRootSignature->GetRootSignature().Get();
 			SubObject.pDesc = &RootSign;
 
-#ifdef _DEBUG
 			SubObjectArray[index] = SubObject;
-#else
-			SubObjectArray.push_back(SubObject);
-#endif
+
 			index++;
 
 			m_DescriptorTableData.clear();
@@ -766,7 +742,7 @@ void RayTracingControl::End()
 
 	////Outputバッファをコピー
 	GetDX12Renderer->CopyResource(m_OutputBuffer);
-
+		
 	////バリアのトランジションを更新する
 	GetDX12Renderer->ChangeTransition(m_RTarget, D3D12_RESOURCE_STATE_COPY_DEST, D3D12_RESOURCE_STATE_RENDER_TARGET);
 }
